@@ -1,0 +1,12 @@
+env:
+- name: DEPLOY_NAMESPACE
+  value: jx-staging
+pipelineConfig:
+  env:
+  - name: DEPLOY_NAMESPACE
+    value: jx-staging
+  pipelines:
+    release:
+      postBuild:
+        steps:
+        - command: echo “Executing integration tests!”
